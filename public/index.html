@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Meal Planner</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="mealplanner.js"></script>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <img src="plate.png">
+    <h1>Meal Planner</h1>
+    <img src="plate.png">
+    <h4>Plan out your next meal!</h4>
+  </div>
+  <div class="container">
+    <div>
+      <h2>Fridge</h2>
+      <div class="buttons">
+        <button id="fruit-button">Fruits and Vegetables</button>
+        <button id="grain-button">Grain Products</button>
+        <button id="milk-button">Milk and Alternatives</button>
+        <button id="meat-button">Meat and Alternatives</button>
+      </div>
+      <br>
+      <div class="fruit" style="display: none;">
+        <table id="fruit-display"></table>
+      </div>
+
+      <div class="grain" style="display: none;">
+        <table id="grain-display"></table>
+      </div>
+      <div class="milk" style="display: none;">
+        <table id="milk-display"></table>
+      </div>
+      <div class="meat" style="display: none;">
+        <table id="meat-display"></table>
+      </div>
+
+      <br>
+      <h3>Add or Remove Food</h3>
+      <div id="food-adder">
+        <form id="food-form" action="">
+          Food name:<br>
+          <input type="text" name="name" required><br>
+          <br>
+          Category:<br>
+          <input type="radio" name="category" value="Fruits and Vegetables" checked> Fruits and Vegetables<br>
+          <input type="radio" name="category" value="Grain Products"> Grain Products<br>
+          <input type="radio" name="category" value="Milk and Alternatives"> Milk and Alternatives<br>
+          <input type="radio" name="category" value="Meat and Alternatives"> Meat and Alternatives<br>
+          <br>
+          Description:<br>
+          <input type="text" name="description">
+          <br>
+          Amount (enter negative amount to remove):<br>
+          <input type="number" name="amount" required>
+          <br>
+          Units:<br>
+          <input type="text" name="units" required>
+          <br><br>
+          <input type="submit" value="Submit">
+        </form>
+        <p id="done"></p>
+      </div>
+    </div>
+
+
+    <div>
+      <h2>Table</h2>
+      <h4>Enter the items you want to include in your meal.</h4>
+      <form id="meal-planner">
+        Enter the food name:<br>
+        <input type="text" name="name" required> <br>
+        <br>Enter the amount (number only):<br>
+        <input type="number" name="amount" required> <br>
+        <p id="enough" style="color:red;"></p>
+        <input type="submit" value="Submit">
+      </form>
+      <br>
+      <h4>Here are the items you've added so far (click on an item to remove it):</h4>
+      <ul id="meal-foods"></ul>
+      <form id="meal-specifications">
+        Recipe:<br>
+        <input type="text" name="recipe"> <br>
+        <br> Type: <br>
+        <input type="radio" name="type" value="Breakfast" checked> Breakfast<br>
+        <input type="radio" name="type" value="Lunch"> Lunch<br>
+        <input type="radio" name="type" value="Dinner"> Dinner<br>
+        <input type="radio" name="type" value="Snack"> Snack<br>
+        <input type="radio" name="type" value="Other"> Other<br><br>
+        <input type="submit" value="Create Meal">
+      </form>
+      <p id="created"></p>
+    </div>
+
+    <div>
+      <h2>Meals</h2>
+      <table id="meals"></table>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+body {
+  background-color: antiquewhite;
+  font-family: Georgia, serif;
+}
+
+h1 {
+  font-size: 42px;
+  display: inline;
+  padding: 20px;
+  /* font-family: cursive; */
+}
+
+#header {
+  float: center;
+  text-align: center;
+  /* background-image: linear-gradient(white, antiquewhite) */
+}
+
+img {
+  width: 5%;
+}
+
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button, input[type=submit] {
+  border-radius: 4px;
+  background-color: burlywood; /* Green */
+  border: none;
+  color: white;
+  /* padding: 5px 10px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+input[type=text]:focus {
+  border: 3px solid #ebe188;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* fraction*/
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 90%;
+  padding: 8px;
+  table-layout: fixed;
+}
